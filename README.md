@@ -32,6 +32,7 @@ along with a lot more.
 | **Key notation**: Camelot, classic, Open Key | MODS menu > Keys |
 | **MODS menu** | SHIFT + MENU |
 | **Screenshots** | SHIFT + TAG LIST |
+| **Load splash**: version, link, mods loaded | Shows for 3 s after loading |
 
 ![Controls](images/rrmods-controls.png)
 
@@ -46,7 +47,8 @@ You need a USB stick formatted **FAT32**.
    Your music can be on the same stick.
 3. Power on the XDJ-RR and wait until it has **fully booted**.
 4. Insert the stick and wait for the USB light to stop blinking (a few seconds).
-5. That's it. Press **SHIFT + MENU** and the MODS menu opens. If it does, everything is loaded.
+5. That's it. An RRMODS splash shows for 3 seconds with the number of mods loaded. Press
+   **SHIFT + MENU** any time and the MODS menu opens.
 
 The mods stay on until you power off, and you can take the stick out if you like. To use them
 again after a power-off, insert the stick again.
@@ -228,6 +230,12 @@ the player's CPU and memory.
 
 Changes in the menu are **not saved**. After a power-off, `RRMODS.txt` decides again.
 
+### Load splash
+
+When the mods have loaded, a card shows for 3 seconds: the version, the link to this page and how
+many mods loaded. If a part refused (see [Troubleshooting](#troubleshooting)), it says so in amber.
+It shows once per power-on and takes no input. Turn it off with `splash = off`.
+
 ### Screenshots
 
 **SHIFT + TAG LIST** saves what the screen shows, at any time (up to 9 per power-on). They come
@@ -255,6 +263,7 @@ on. The most useful lines:
 | `colorfx` | bank 1: `stock`, `off`, or your own list (below) |
 | `colorfx_bank2` … `colorfx_bank4` | a list like `filterecho dubecho, pitchplus pitch, noiseplus noise, gatecomp filter`, or `stock` |
 | `menu`, `menu_alpha` | the MODS menu `on` / `off`; see-through `0`–`255` (255 = solid) |
+| `splash` | `on` / `off`: the 3 s load splash |
 | `fxtime` | `on` / `off`: free Beat FX time |
 | `beatx` | `on` / `off` / `backspin` / `revroll` |
 | `parameter` | `on` / `off`: AUX knob as PARAMETER |
