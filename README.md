@@ -296,8 +296,10 @@ power-on.
   effects. RRMODS is made for standalone USB play.
 - **Live use:** test your setup at home first. If anything ever seems wrong, a power cycle
   takes the unit back to stock.
-- **The stick gets a log folder** `RRMODS_LOG/attempt-N/` each time you insert it. It's small
-  and safe to delete.
+- **The stick gets a log folder** `RRMODS_LOG/attempt-N/` each time you insert it, for bug
+  reports. **Delete the `RRMODS_LOG` folder now and then:** v1.0.0 makes at most 100 attempt
+  folders, and once `attempt-100` exists the mods no longer load from that stick (nothing is
+  changed on the unit). Deleting the folder is always safe.
 
 ## Troubleshooting
 
@@ -317,6 +319,9 @@ others still work.
 
 **No log folder at all?** The stick must be FAT32, with `autoexec.bin` and `RRMODS.txt` in the
 root, inserted after the unit has fully booted.
+
+**Worked before, now nothing loads and no new attempt folder appears?** `RRMODS_LOG` has reached
+`attempt-100`. Delete the `RRMODS_LOG` folder and insert the stick again.
 
 **Bug reports:** open a [GitHub issue](../../issues) and attach the whole `RRMODS_LOG` folder.
 Please don't send bug reports through social media.
